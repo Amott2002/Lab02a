@@ -17,11 +17,9 @@
 	</head>
 
 	<body>
-		<c:if test="${! empty errorMessage}">
+		<c:if test="${! empty errorMessage}"> 
 			<div class="error">${errorMessage}</div>
-		</c:if>
-	
-		<form action="${pageContext.servletContext.contextPath}/addNumbers" method="post">
+			<form action="${pageContext.servletContext.contextPath}/addNumbers" method="post">
 			<table>
 				<tr>
 					<td class="label">First number:</td>
@@ -42,5 +40,29 @@
 			</table>
 			<input type="Submit" name="submit" value="Add Numbers!">
 		</form>
+		</c:if>
+		<c:if test="${empty errorMessage}"> 
+				<form action="${pageContext.servletContext.contextPath}/addNumbers" method="post">
+			<table>
+				<tr>
+					<td class="label">First number:</td>
+					<td><input type="text" name="first" size="12" value="${numbers.first}" /></td>
+				</tr>
+				<tr>
+					<td class="label">Second number:</td>
+					<td><input type="text" name="second" size="12" value="${numbers.second}" /></td>
+				</tr>
+				<tr>
+					<td class="label">Third number:</td>
+					<td><input type="text" name="third" size="12" value="${numbers.third}" /></td>
+				</tr>
+				<tr>
+					<td class="label">Result:</td>
+					<td>${numbers.result}</td>
+				</tr>
+			</table>
+			<input type="Submit" name="submit" value="Add Numbers!">
+		</form>
+		</c:if>
 	</body>
 </html>

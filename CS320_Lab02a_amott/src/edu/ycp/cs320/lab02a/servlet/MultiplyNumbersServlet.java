@@ -43,11 +43,11 @@ public class MultiplyNumbersServlet extends HttpServlet {
 		
 		// decode POSTed form parameters and dispatch to controller
 		try {
-			Double curNumber1 = getDoubleFromParameter(req.getParameter("number1"));
-			Double curNumber2 = getDoubleFromParameter(req.getParameter("number2"));
+			Double curNumber1 = getDoubleFromParameter(req.getParameter("first"));
+			Double curNumber2 = getDoubleFromParameter(req.getParameter("second"));
 			
-			model.setNumber1(curNumber1);
-			model.setNumber2(curNumber2);
+			model.setFirst(curNumber1);
+			model.setSecond(curNumber2);
 			
 			// check for errors in the form data before using is in a calculation
 			if (curNumber1 == null || curNumber2 == null) {
@@ -64,6 +64,8 @@ public class MultiplyNumbersServlet extends HttpServlet {
 		} catch (NumberFormatException e) {
 			errorMessage = "Invalid double.";
 		}
+		
+		req.setAttribute("numbers", model);
 		
 		// Add parameters as request attributes
 		// this creates attributes named "first" and "second for the response, and grabs the

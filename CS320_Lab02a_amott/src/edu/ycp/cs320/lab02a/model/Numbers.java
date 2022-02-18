@@ -13,27 +13,27 @@ public class Numbers {
 	public Numbers() {
 	}
 	
-	public void setNumber1(Double number1) {
+	public void setFirst(Double number1) {
 		this.number1 = number1;
 	}
 	
-	public Double getNumber1() {
+	public Double getFirst() {
 		return number1;
 	}
 	
-	public void setNumber2(Double number2) {
+	public void setSecond(Double number2) {
 		this.number2 = number2;
 	}
 	
-	public Double getNumber2() {
+	public Double getSecond() {
 		return number2;
 	}
 	
-	public void setNumber3(Double number3) {
+	public void setThird(Double number3) {
 		this.number3 = number3;
 	}
 	
-	public Double getNumber3() {
+	public Double getThird() {
 		return number3;
 	}
 	

@@ -12,11 +12,11 @@ public class NumbersController {
 	
 	//add method
 	public Double add() {
-		return model.getNumber1() + model.getNumber2() + model.getNumber3();
+		return model.getFirst() + model.getSecond() + model.getThird();
 	}
 	
 	//multiply method
 	public Double multiply() {
-		return model.getNumber1()*model.getNumber2();
+		return model.getFirst()*model.getSecond();
 	}
 }
